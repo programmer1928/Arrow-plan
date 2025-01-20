@@ -1,0 +1,6 @@
+.svgShadow {
+  --tw-drop-shadow: drop-shadow(3px 3px 10px rgb(0 0 0));
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast)
+    var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate)
+    var(--tw-sepia) var(--tw-drop-shadow);
+}

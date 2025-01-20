@@ -1,0 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .flexCenter {
+    @apply flex justify-center items-center;
+  }
+  .flexColCenter {
+    @apply flex flex-col justify-center items-center;
+  }
+  .sectionStyle {
+    @apply text-myWhite bg-sections bg-gradient-to-r from-myWhite/5 w-full rounded-2xl myShadow;
+  }
+  /******************************/
+  .workTask {
+    @apply w-max me-4;
+  }
+  .workTask > p {
+    @apply text-base capitalize relative cursor-pointer hover:scale-110 text-myYellow duration-100 transition-all;
+  }
+  .workTask.completedTask > p {
+    @apply !text-paragraph;
+  }
+  .workTask.PG > p {
+    @apply text-myGreen;
+  }
+  .workTask.EN > p {
+    @apply text-myBlue;
+  }
+  .workTask.EX > p {
+    @apply text-myRed;
+  }
+  /******************************/
+  .workTask > span {
+    @apply h-[2px] w-[calc(100%+1rem)] block relative bg-myYellow duration-150 transition-all;
+  }
+  .workTask.completedTask > span {
+    @apply !bg-paragraph;
+  }
+  .workTask.PG > span {
+    @apply bg-myGreen;
+  }
+  .workTask.EN > span {
+    @apply bg-myBlue;
+  }
+  .workTask.EX > span {
+    @apply bg-myRed;
+  }
+  /******************************/
+  .workTask > span > svg {
+    @apply absolute right-0 top-1/2 -translate-y-1/2 h-4 fill-myYellow duration-150 transition-all;
+  }
+  .workTask.completedTask > span > svg {
+    @apply !fill-paragraph;
+  }
+  .workTask.PG > span > svg {
+    @apply fill-myGreen;
+  }
+  .workTask.EN > span > svg {
+    @apply fill-myBlue;
+  }
+  .workTask.EX > span > svg {
+    @apply fill-myRed;
+  }
+  /******************************/
+  .offTask {
+    @apply w-max me-4 ;
+  }
+  .offTask > p {
+    @apply text-base text-icon capitalize relative;
+  }
+  .offTask > span {
+    @apply bg-icon h-[2px] w-[calc(100%+1rem)] block relative;
+  }
+  .offTask > span > svg {
+    @apply absolute right-0 top-1/2 -translate-y-1/2 h-4 fill-icon;
+  }
+}
+
+@layer components {
+  .myShadow {
+    box-shadow: 6px 6px 26px 2px rgba(0, 0, 0, 0.5);
+  }
+  .ltrGradient {
+    -webkit-box-shadow: inset 124px 0px 185px -107px rgba(255, 255, 255, 0.8);
+    -moz-box-shadow: inset 124px 0px 185px -107px rgba(255, 255, 255, 0.8);
+    box-shadow: inset 124px 0px 185px -107px rgba(255, 255, 255, 0.8);
+  }
+  .gradient315 {
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(
+      315deg,
+      rgba(0, 0, 0, 0.25) 0%,
+      rgba(255, 255, 255, 0.25) 100%
+    );
+    background: -webkit-linear-gradient(
+      315deg,
+      rgba(0, 0, 0, 0.25) 0%,
+      rgba(255, 255, 255, 0.25) 100%
+    );
+    background: linear-gradient(
+      315deg,
+      rgba(0, 0, 0, 0.25) 0%,
+      rgba(255, 255, 255, 0.25) 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#ffffff",GradientType=1);
+  }
+}

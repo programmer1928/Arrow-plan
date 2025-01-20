@@ -1,0 +1,9 @@
+.disabledElement{
+    opacity: 40%;
+    pointer-events: none;
+    cursor: not-allowed;
+}
+.disabledElement *{
+    pointer-events: none;
+    cursor: not-allowed;
+}
